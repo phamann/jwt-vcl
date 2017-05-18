@@ -53,5 +53,5 @@ If the signature is invalid, we return a 403. If the signature is valid but the 
 To see token expiration, wait 1-2 minutes and try validate again.
 
 ## Notes:
-- In the demo we have used an inline edge dictionary in the vcl file and Terraform templating to store and pass you secret key to the vcl. Whilst this is sufficient we recommend generating an Edge Dictionary using the API instead, as this abstracts the storage of the key/value pairs out of vcl and allows you to manage the key via API calls out of the lifecycle of your vcl deployment.
+- In the demo we have used an inline edge dictionary in the vcl file and used Terraform templating to compile your secret into the vcl during provisioning. Whilst this is sufficient, we recommend generating an [Edge Dictionary using the API](https://docs.fastly.com/guides/edge-dictionaries/creating-and-using-dictionaries#create-an-empty-dictionary-container-within-a-service) instead, as this abstracts the storage of the key/value pairs out of vcl and allows you to manage the key via API calls seperate of the lifecycle of your vcl deployment.
 - This **shouldn't** be used as a replacement for proper session management and storage.
