@@ -6,7 +6,7 @@ JSON Web Tokens are an open, industry standard [RFC 7519](https://tools.ietf.org
 ## Why?
 
 #### Validation
-You may have user requests that already contain a generated JWT (for example in a Cookie) and want to validate them quickly on the edge before granting access to a backend.
+You may have user requests that already contain a generated JWT (for example in a `Cookie:`) and want to validate them quickly on the edge before granting access to a backend.
 Useful when:
 - You have a different auth/session backend that you want to validate user claims against before restarting request and sending to service backend.
 - You want a light stateless endpoint you can call client-side to quickly to validte a user claim.
@@ -15,13 +15,14 @@ Useful when:
 You want to generate them on the edge for short-lived, one-time password type scenarios. 
 
 Useful when:
-- The tokens are short-lived. They only need to be valid for a few minutes, to allow Edge to validate certain requests such as data mutation. 
+- The tokens are short-lived. They only need to be valid for a few minutes and allow edge to validate certain requests such as data mutation. 
 - The token is only expected to be used once. The application server would issue a new token for every requests/response, so any one token is just used to request a resource or POST data once, and then thrown away. There's no persistent state, at all.
 
 ## Install:
 - [Install Terraform](https://www.terraform.io/downloads.html)
 - Generate a new session secret key `openssl rand -base64 32`
 - Create and edit a `terraform.tfvars` in the project root with your [Fastly API token](https://docs.fastly.com/api/auth#tokens), secret key and domain name.
+- `$ terraform apply`
 
 terraform.tfvars
 ```env
