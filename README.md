@@ -52,5 +52,5 @@ If the signature is invalid, we return a 403. If the signature is valid but the 
 To see token expiration, wait 1-2 minutes and try validate again.
 
 ## Notes:
-- In the demo we have used an inline edge dictionary in the vcl file and Terraform templating to store and pass you secret key to the vcl. Whilst this is suffcient we reccomend generating an Edge Dictionary using the API instead, as this abstracts the sotrage of the key/value pairs out of vcl and allows you to man age the key via API calls out of the lifecycle of your vcl deployment.
+- In the demo we have used an inline edge dictionary in the vcl file and Terraform templating to store and pass you secret key to the vcl. Whilst this is sufficient we recommend generating an Edge Dictionary using the API instead, as this abstracts the storage of the key/value pairs out of vcl and allows you to manage the key via API calls out of the lifecycle of your vcl deployment.
 - This **shouldn't** be used as a replacement for proper session management and storage.
