@@ -11,7 +11,7 @@ Useful when:
 - You have a different auth/session backend that you want to validate user claims against before restarting request and sending to service backend.
 - You want a light stateless endpoint you can call client-side to quickly to validte a user claim.
 
-### Generation
+#### Generation
 You want to generate them on the edge for short-lived, one-time password type scenarios. 
 
 Useful when:
