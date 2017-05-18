@@ -21,7 +21,7 @@ Useful when:
 ## Install:
 - [Install Terraform](https://www.terraform.io/downloads.html)
 - Generate a new session secret key `openssl rand -base64 32`
-- Create and edit a `terraform.tfvars` in the projetc root with your [Fastly API token](https://docs.fastly.com/api/auth#tokens), secret key and domain name.
+- Create and edit a `terraform.tfvars` in the project root with your [Fastly API token](https://docs.fastly.com/api/auth#tokens), secret key and domain name.
 
 terraform.tfvars
 ```env
